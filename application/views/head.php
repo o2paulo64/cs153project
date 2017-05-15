@@ -33,7 +33,7 @@
 				<ul class='nav navbar-nav'>
 
 					<li class='dropdown'>
-						<a href="<?php echo base_url('index.php/Create_controller/index')?>" class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Create</a>
+						<a href="<?php echo base_url('index.php/Create_controller/index')?>" aria-haspopup='true' aria-expanded='false'>Create</a>
 						
 					</li>
 
