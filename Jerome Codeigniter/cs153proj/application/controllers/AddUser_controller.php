@@ -41,7 +41,7 @@ class AddUser_controller extends CI_Controller
 				'birthYear' => $this->input->post('birthYear'),
 				'username' => $this->input->post('username'),
 				'address' => $this->input->post('address'),
-				'authority' => 1,
+				'authority' => 0,
 				'password' => sha1($this->input->post('password')),
 				'userId' => $this->adduser_model->assign_usercode(),
 			);

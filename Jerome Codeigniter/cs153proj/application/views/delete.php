@@ -58,32 +58,35 @@
 	</nav>
 	<article>
 	<h1>Welcome, <?php echo($username);?></h1>
-	<?php
-		if(validation_errors() != "")
-		{
-			echo('<div class="alert alert-danger"><strong>'.validation_errors().'</strong></div>');
-		}
-	?>
-	<form action ="<?php echo base_url('index.php/AddUser_controller'); ?>" method='POST'>
-		First name:<br>
-		<input type="text" name="firstname"><br>
-		Last name:<br>
-		<input type="text" name="lastname"><br>
-		BirthMonth:<br>
-		<input type="text" name="birthMonth"><br>
-		BirthDay:<br>
-		<input type="text" name="birthDay"><br>
-		BirthYear:<br>
-		<input type="text" name="birthYear"><br>
-		Address:<br>
-		<input type="text" name="address"><br>
-		username:<br>
-		<input type="text" name="username"><br>
-		Password:<br>
-		<input type="password" name="password"><br>
-		Retype Password:<br>
-		<input type="password" name="repassword"><br>
-		
-		<input type="submit" value="Submit">
-	</form>
+	<h2>Delete Entries</h2>
+	<table class="table table-striped table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Birthday</th>
+					<th> </th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+				foreach ($results->result_array() as $row)
+				{
+					echo("<tr>");
+					echo("<td>".$row['firstname']."</td>");
+					echo("<td>".$row['lastname']."</td>");
+					echo("<td>".$row['birthMonth']." ".$row['birthDay'].",".$row['birthYear']."</td>");
+						echo("<td>");
+						echo('<form accept-charset="UTF-8" role="form" action ="');
+						echo base_url('index.php/Delete_controller/index');
+						echo ('" method="POST">');
+						echo ('<input type="hidden" name="userId" value="'.$row['userId'].'">');
+						echo('<button type="submit" >Delete Entry</a>');
+						echo("</form>");
+						echo("</td>");
+						echo("</tr>");
+				}
+				?>
+			</tbody>
+		</table>	
 </body>

@@ -35,7 +35,7 @@
 			<div class='collapse navbar-collapse' id='topFixedNavbar1'>	
 
 				<ul class='nav navbar-nav'>
-					<li><a href="<?php echo base_url('index.php/Landing_controller/index')?>">Home</a></li>
+
 					<li class='dropdown'>
 						<a href="<?php echo base_url('index.php/Create_controller/index')?>" class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Create<span class='caret'></span></a>
 						<ul class='dropdown-menu'>
@@ -50,40 +50,12 @@
 						</ul>
 					</li>
 
-					<li><a href='#'>View</a></li>
-					<li><a href="<?php echo base_url('index.php/ViewDelete_controller/index')?>">Delete Users</a></li>
-					<li><a href="<?php echo base_url('index.php/ViewUpgrade_controller/index')?>">Upgrade Users</a></li>
+					<li><a href="<?php echo base_url('index.php/ViewOnline_controller/index')?>">View Online</a></li>
+					<li><a href='#'>Delete Users</a></li>
 				</ul>
 		</div>
 	</nav>
 	<article>
 	<h1>Welcome, <?php echo($username);?></h1>
-	<?php
-		if(validation_errors() != "")
-		{
-			echo('<div class="alert alert-danger"><strong>'.validation_errors().'</strong></div>');
-		}
-	?>
-	<form action ="<?php echo base_url('index.php/AddUser_controller'); ?>" method='POST'>
-		First name:<br>
-		<input type="text" name="firstname"><br>
-		Last name:<br>
-		<input type="text" name="lastname"><br>
-		BirthMonth:<br>
-		<input type="text" name="birthMonth"><br>
-		BirthDay:<br>
-		<input type="text" name="birthDay"><br>
-		BirthYear:<br>
-		<input type="text" name="birthYear"><br>
-		Address:<br>
-		<input type="text" name="address"><br>
-		username:<br>
-		<input type="text" name="username"><br>
-		Password:<br>
-		<input type="password" name="password"><br>
-		Retype Password:<br>
-		<input type="password" name="repassword"><br>
-		
-		<input type="submit" value="Submit">
-	</form>
+	
 </body>

@@ -35,7 +35,7 @@
 			<div class='collapse navbar-collapse' id='topFixedNavbar1'>	
 
 				<ul class='nav navbar-nav'>
-
+					<li><a href="<?php echo base_url('index.php/Landing_controller/index')?>">Home</a></li>
 					<li class='dropdown'>
 						<a href="<?php echo base_url('index.php/Create_controller/index')?>" class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Create<span class='caret'></span></a>
 						<ul class='dropdown-menu'>
@@ -51,7 +51,8 @@
 					</li>
 
 					<li><a href='#'>View</a></li>
-					<li><a href='#'>Delete Users</a></li>
+					<li><a href="<?php echo base_url('index.php/ViewDelete_controller/index')?>">Delete Users</a></li>
+					<li><a href="<?php echo base_url('index.php/ViewUpgrade_controller/index')?>">Upgrade Users</a></li>
 				</ul>
 		</div>
 	</nav>
