@@ -1,16 +1,24 @@
 <?php
-	include 'head.php'
+	include 'head.php';
 ?>
-	<article>
-	<h1>Welcome, <?php echo($username);?></h1>
-	<?php
-	foreach ($info->result_array() as $row)
-	{
-		echo('<p>Username: '.$row['username'].'</p>');
-		echo('<p>Name: '.$row['firstname'].' '.$row['lastname'].'</p>');
-		echo('<p>Address: '.$row['address'].'</p>');
-		echo('<p>Password: '.$row['birthMonth'].' '.$row['birthDay'].','.$row['birthYear'].'</p>');
-		
-	}
-	?>
+	<div class='container-fluid'>
+
+		<h1>Welcome, <?php echo($username);?></h1>
+		<div class='row' style='margin-top: 30px;'>
+			<div class='col-md-12'>
+			<div class='col-md-4'>
+				<?php
+				foreach ($info->result_array() as $row)
+				{
+					echo('<p><b>Username:</b> '.$row['username'].'</p>');
+					echo('<p><b>Name:</b> '.$row['firstname'].' '.$row['lastname'].'</p>');
+					echo('<p><b>Address:</b> '.$row['address'].'</p>');
+					echo('<p><b>Birthday:</b> '.$row['birthMonth'].' '.$row['birthDay'].','.$row['birthYear'].'</p>');
+					
+				}
+				?>
+			</div>
+			</div>
+		</div>
+	</div>
 </body>
