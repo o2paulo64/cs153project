@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 // session_start(); //we need to call PHP's session object to access it through CI
-class ViewDelete_controller extends CI_Controller 
+class ViewDowngrade_controller extends CI_Controller 
 {
 
  function __construct()
@@ -16,8 +16,8 @@ class ViewDelete_controller extends CI_Controller
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['userName'];
 	 $data['userid'] = $session_data['userID'];
-	 $data['results'] = $this->update_model->returnall($data['userid']);
-	 $this->load->view('delete', $data);
+	 $data['results'] = $this->update_model->returnpros($data['userid']);
+	 $this->load->view('downgrade', $data);
    }
    else
    {

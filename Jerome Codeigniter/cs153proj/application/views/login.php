@@ -11,12 +11,9 @@
 <title>Project</title>
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<link href="css/style.css" rel="stylesheet" type="text/css">	
-<link href="css/login.css" rel="stylesheet" type="text/css">	
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
-
+<script type = 'text/javascript' src = "<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
 </head>
 
 <body>

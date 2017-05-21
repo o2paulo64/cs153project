@@ -13,11 +13,11 @@ class Landing_controller extends CI_Controller
  {
    if($this->session->userdata('logged_in'))
    {
-     $session_data = $this->session->userdata('logged_in');
-     $data['username'] = $session_data['userName'];
-	 $data['userid'] = $session_data['userID'];
-	 $data['info'] = $this->Landing_model->getInfo($data['userid']);
-     $this->load->view('landing', $data);
+    $session_data = $this->session->userdata('logged_in');
+    $data['username'] = $session_data['userName'];
+    $data['userid'] = $session_data['userID'];
+    $data['info'] = $this->Landing_model->getInfo($data['userid']);
+    $this->load->view('landing', $data);
 	 
    }
    else

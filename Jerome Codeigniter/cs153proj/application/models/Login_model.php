@@ -15,7 +15,17 @@ Class login_model extends CI_Model
    
    if($query -> num_rows() == 1)
    {
-     return $query->result();
+	    foreach ($query->result_array() as $row)
+		{
+				$data = array(
+			'userId' => $row['userId'],
+			'username' => $row['username'],
+			'firstname' => $row['firstname'],
+			'lastname' => $row['lastname'],
+			);
+		}
+		$this -> db ->insert('login',$data);
+		return $query->result();
    }
    else
    {

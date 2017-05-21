@@ -1,10 +1,9 @@
-<?php
+<?php 
 	include 'head.php';
 ?>
-
 	<div class='container-fluid'>
 		<div class='well well-sm'>
-			<center><h2>Delete Entries</h2></center>
+			<center><h2>Downgrade Entries</h2></center>
 			
 		</div>
 	</div>
@@ -15,7 +14,7 @@
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Birthday</th>
-					<th>Action</th>
+					<th>Action </th>
 				</tr>
 			</thead>
 			<tbody>
@@ -28,10 +27,18 @@
 					echo("<td>".$row['birthMonth']." ".$row['birthDay'].",".$row['birthYear']."</td>");
 						echo("<td>");
 						echo('<form accept-charset="UTF-8" role="form" action ="');
-						echo base_url('index.php/Delete_controller/index');
+						echo base_url('index.php/Downgrade_controller/index');
 						echo ('" method="POST">');
+						echo ('<input type="hidden" name="firstName" value="'.$row['firstname'].'">');
+						echo ('<input type="hidden" name="lastName" value="'.$row['lastname'].'">');
+						echo ('<input type="hidden" name="birthMonth" value="'.$row['birthMonth'].'">');
+						echo ('<input type="hidden" name="birthDay" value="'.$row['birthDay'].'">');
+						echo ('<input type="hidden" name="birthYear" value="'.$row['birthYear'].'">');
+						echo ('<input type="hidden" name="address" value="'.$row['address'].'">');
+						echo ('<input type="hidden" name="username" value="'.$row['username'].'">');
+						echo ('<input type="hidden" name="password" value="'.$row['password'].'">');
 						echo ('<input type="hidden" name="userId" value="'.$row['userId'].'">');
-						echo('<button type="submit" >Delete Entry</a> ');
+						echo('<button type="submit" >Downgrade Entry</a>');
 						echo("</form>");
 						echo("</td>");
 						echo("</tr>");

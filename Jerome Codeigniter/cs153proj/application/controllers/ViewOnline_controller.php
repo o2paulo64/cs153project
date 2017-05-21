@@ -6,6 +6,7 @@ class ViewOnline_controller extends CI_Controller
  function __construct()
  {
    parent::__construct();
+   $this->load->model('update_model','',TRUE);
  }
 
  function index()
@@ -15,6 +16,7 @@ class ViewOnline_controller extends CI_Controller
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['userName'];
 	 $data['userid'] = $session_data['userID'];
+	  $data['results'] = $this->update_model->viewonline($data['userid']);
      $this->load->view('view', $data);
 	 
    }

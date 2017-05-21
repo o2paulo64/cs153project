@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2017 at 03:07 PM
+-- Generation Time: May 21, 2017 at 11:41 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -19,6 +19,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `user_database`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `userid` int(11) NOT NULL,
+  `username` text NOT NULL,
+  `firstname` text NOT NULL,
+  `lastname` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -45,8 +58,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userId`, `username`, `password`, `authority`, `firstname`, `lastname`, `address`, `birthDay`, `birthYear`, `birthMonth`) VALUES
 (0, 'admin', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 1, 'Philip', 'Zuniga', '0', 1, 1, 'January'),
-(1, 'jerjer', '9b60182c98fddbcdb600cd88b6c5fec32220fc1a', 1, 'Jerome', 'Angala', '', 6, 1997, 'December'),
-(2, 'je', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 1, 'J', 'A', 'sasa', 6, 1997, 'December');
+(1, 'paupau', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 0, 'Paulo', 'Santiago', 'Bahay ni Paolo', 31, 1995, 'January');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

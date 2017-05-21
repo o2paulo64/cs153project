@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 // session_start(); //we need to call PHP's session object to access it through CI
-class ViewDelete_controller extends CI_Controller 
+class ViewEdit_controller extends CI_Controller 
 {
 
  function __construct()
@@ -17,7 +17,7 @@ class ViewDelete_controller extends CI_Controller
      $data['username'] = $session_data['userName'];
 	 $data['userid'] = $session_data['userID'];
 	 $data['results'] = $this->update_model->returnall($data['userid']);
-	 $this->load->view('delete', $data);
+	 $this->load->view('update', $data);
    }
    else
    {
